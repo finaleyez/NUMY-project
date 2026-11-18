@@ -19,25 +19,16 @@ choice = input('\nEnter choice (1 or 2): ');
 if choice == 1
 
     P = input('Enter constant pressure (kPa): ');
-
     X = input('Enter temperature values [T1 T2 ...]: ');
-
     Xq = input('Enter desired temperature (C): ');
-
     xLabel = 'Temperature (C)';
-
     condition = sprintf('Constant Pressure = %.2f kPa', P);
 
 elseif choice == 2
-
     T = input('Enter constant temperature (C): ');
-
     X = input('Enter pressure values [P1 P2 ...]: ');
-
     Xq = input('Enter desired pressure (kPa): ');
-
     xLabel = 'Pressure (kPa)';
-
     condition = sprintf('Constant Temperature = %.2f C', T);
 
 else
