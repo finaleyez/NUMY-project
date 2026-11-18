@@ -1,12 +1,12 @@
-function Yq = linearHatInterp(X, Y, Xq)
+function Yq = linearHatInterp(X, H, Xq)
 
     % Convert input data into column vectors
     X = X(:);
-    Y = Y(:);
+    H = H(:);
 
     % Validate data; at least two points, increasing, matching sizes so data points correspond
-    if length(X) ~= length(Y)
-        error('X and Y must have the same number of elements.');
+    if length(X) ~= length(H)
+        error('X and H must have the same number of elements.');
     end
 
     if length(X) < 2
@@ -37,7 +37,7 @@ function Yq = linearHatInterp(X, Y, Xq)
         phi = hatFunction(X, i, Xq);
 
         % Multiply by corresponding enthalpy and add
-        Yq = Yq + Y(i) .* phi;
+        Hq = Hq + H(i) .* phi;
     end
 end
 
