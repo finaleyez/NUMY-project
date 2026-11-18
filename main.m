@@ -3,9 +3,6 @@ clc;
 clear;
 close all;
 
-% Add Algorithms folder
-addpath('Algorithms');
-
 fprintf('THERMODYNAMIC INTERPOLATION USING HAT FUNCTIONS\n');
 fprintf('===============================================\n');
 
