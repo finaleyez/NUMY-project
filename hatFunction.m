@@ -39,14 +39,12 @@ function phi = hatFunction(X, i, Xq)
     if i == 1
 
         mask = Xq >= X(1) & Xq <= X(2);
-
         phi(mask) = (X(2) - Xq(mask)) / (X(2) - X(1));
 
     % Last hat function
     elseif i == length(X)
 
         mask = Xq > X(end-1) & Xq <= X(end);
-
         phi(mask) = (Xq(mask) - X(end-1)) / (X(end) - X(end-1));
 
     % Interior hat functions
