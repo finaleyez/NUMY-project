@@ -1,4 +1,4 @@
-function Yq = linearHatInterp(X, H, Xq)
+function Hq = linearHatInterp(X, H, Xq)
 
     % Convert input data into column vectors
     X = X(:);
